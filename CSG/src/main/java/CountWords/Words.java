@@ -61,4 +61,18 @@ public class Words {
         }
         return count;
     }
+
+    /**
+     * @param l length of words to retrieve
+     * @return array list of words with length more than l
+     */
+    public ArrayList<String> getWordsWithLength(int l){
+        ArrayList<String> list = new ArrayList<>();
+        for (String word : words){
+            if(word.length() >l){
+                list.add(word);
+            }
+        }
+        return list;
+    }
 }
