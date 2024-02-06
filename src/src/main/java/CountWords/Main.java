@@ -1,7 +1,11 @@
 package CountWords;
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 public class Main {
 
+    private static final Logger logger= Logger.getLogger("Main");
     /**
      * @param args filename
      */
@@ -14,7 +18,7 @@ public class Main {
             System.out.println("Number of Words with Length 5 or more : "
                     + w.countWordsWithLength(5));
         } catch (Exception e) {
-            throw new RuntimeException(e);
+            logger.log(Level.SEVERE, "Error Main Function" + "\n" + e);
         }
     }
 }

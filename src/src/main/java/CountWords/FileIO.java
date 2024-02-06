@@ -5,9 +5,12 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class FileIO {
 
+    private static final Logger logger= Logger.getLogger("FileIO");
     /**
      * @param filepath string path of the file
      * @return array list of string read from file
@@ -21,7 +24,7 @@ public class FileIO {
             }
             s.close();
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            logger.log(Level.SEVERE, "Error reading file" + "\n" + e);
         }
         return list;
     }
