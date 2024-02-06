@@ -24,6 +24,13 @@ public class Words {
     public Words(List<String> words){
         this.words = words;
     }
+    /**
+     * Constructor
+     * @param filepath path to file which contains list of words
+     */
+    public Words(String filepath){
+        this.words = FileIO.readFileToList(filepath);
+    }
 
     /**
      * Count words beginning with a certain letter. Case Insensitive
