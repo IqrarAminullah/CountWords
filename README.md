@@ -8,7 +8,7 @@ Parameter might need to be modifiable
 
 ## How to Run
 1. Build Project into Jar
-2. Run jar with text file name as param e.g. `java -jar CountWords.jar <Filename> <letter to count> <length of words to get>`
+2. Run jar with text file name as param e.g. `java -jar CountWords.jar <path to word list file> <letter to count> <length of words to get>`
    - For example `java -jar CountWords.jar Wordlist.txt m 5`
    - Need both parameters to work
   
