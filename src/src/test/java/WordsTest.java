@@ -8,28 +8,42 @@ import static org.junit.Assert.assertEquals;
 
 public class WordsTest {
 
-    private final List<String> countWords;
-    public WordsTest(){
-        this.countWords = new ArrayList<>();
+    private final Words words;
 
-        this.countWords.add("Economy");
-        this.countWords.add("Public");
-        this.countWords.add("Menace");
-        this.countWords.add("morphing");
-        this.countWords.add("Mine");
+    /**
+     * Constructor
+     * Initialize List of Words for Test
+     */
+    public WordsTest(){
+        List<String> countWords = new ArrayList<>();
+
+        countWords.add("Economy");
+        countWords.add("Public");
+        countWords.add("Menace");
+        countWords.add("morphing");
+        countWords.add("Mine");
+
+        words = new Words(countWords);
     }
+
+    /**
+     * Test countWordBeginsWith Method from Words Class
+     * Count words beginning with letter "m"
+     */
     @Test
     public void countWordsBeginWithM(){
-        Words w = new Words(countWords);
-        int res = w.countWordsBeginWith('m');
+        int res = words.countWordsBeginWith('m');
 
         assertEquals(3, res);
     }
 
+    /**
+     * Test countWordsWithLength method from Words Class
+     * Count words with length of 5
+     */
     @Test
     public void countWordsLengthFive(){
-        Words w = new Words(countWords);
-        int res = w.countWordsWithLength(5);
+        int res = words.countWordsWithLength(5);
 
         assertEquals(4, res);
     }
